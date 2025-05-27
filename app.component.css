@@ -1,0 +1,32 @@
+form{
+  width: 400px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding:20px;
+}
+label{
+  display: block;
+  margin: 10px 0;
+}
+input,select{
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  margin: 30px auto; /* Top & bottom margin: 30px, left & right: auto (centered) */
+  border-collapse: collapse;
+  width: 80%; /* or 100% or fixed px if needed */
+}
+

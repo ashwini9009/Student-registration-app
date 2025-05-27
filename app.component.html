@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Student-Registration form</title>
+  </head>
+  <body>
+    <form action="">
+      <h1><b>Student Registration Form </b></h1><br>
+      <label >Name: </label>
+      <input type="text"  [(ngModel)]="student.name" name="name" placeholder="Enter your name" required><br><br>
+     <label>Age: </label>
+      <input type="number"  [(ngModel)]="student.age"   name="age" placeholder="Enter your age" required><br><br>
+     <label>E-mail: </label>
+     <input type="text" [(ngModel)]="student.email"  name="email" placeholder="Enter your email" required><br><br>
+       Select Course: <select [(ngModel)]="student.course" name ="course" required>
+        <option value="">Select Course</option>
+          <option value="MCA">MCA</option>
+          <option value="MSC">MSC</option>
+          <option value="BCA">BCA</option>
+          <option value="B.E">B.E</option>
+      </select><br><br>
+      <!--Submit button-->
+      <button (click)="registerStudent()">Register</button>
+    </form>
+ <br><br>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let student of studentList; let i = index">
+          <td>{{student.name}}</td>
+          <td>{{student.age}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.course}}</td>
+          <td><button (click)="deleteStudent(i)">Delete</button></td>
+        </tr>
+      </thead>
+    </table>
+  </body>
+</html>
